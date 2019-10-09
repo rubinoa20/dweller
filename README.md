@@ -15,20 +15,19 @@ int counter = 0;
 int main()
 {
     shut_down_in(five_minutes);
-    while(1){//as long as the log test is true...
+    while(1){ //as long as the log test is true...
      forwards();
-        	if(digital(l_bump)==1){
-        		//if it hits something...
+        	if(digital(l_bump)==1){ //if it hits something backup and turn right
         			backwards();
         			right();
                 	counter=counter+1;
             }
-        	if(digital(r_bump)==1){
+        	if(digital(r_bump)==1){ //if it hits something backup and turn left
                 	backwards();
                     left();
                 	counter=counter+1;
             }
-        	if(counter==5){
+        	if(counter==5){ //backup and make a large left turn
                 	turn();
             		counter=0;
             }
